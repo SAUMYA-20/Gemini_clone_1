@@ -35,8 +35,6 @@ Gemini is a modern, React-based web application built with Vite. It provides a d
 - **Build Tool**: Vite
 - **Styling**: CSS (custom styles for components)
 - **Icons**: React Icons (optional)
-- **Browser APIs**: Utilizes modern browser APIs like `navigator.clipboard` and `navigator.mediaDevices`.
-
 ---
 
 ## Installation
