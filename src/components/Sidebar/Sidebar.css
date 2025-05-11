@@ -1,0 +1,199 @@
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+    overflow: hidden;
+    transition: width 0.3s ease, padding 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Sidebar width states */
+.sidebar-collapsed {
+    width: 80px;
+    padding: 25px 8px;
+}
+
+.sidebar-extended {
+    width: 15vw;
+    min-width: 300px;
+}
+
+/* Common Styles */
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* New Chat Button */
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: padding 0.3s ease-in-out;
+}
+
+/* Recent Section */
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.1s ease, padding 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e0e7f0;
+}
+
+/* Bottom Section */
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #555555;
+    transition: background-color 0.1s ease, padding 0.3s ease;
+}
+
+/* Hide Text Smoothly When Collapsed */
+.sidebar-collapsed .new-chat p,
+.sidebar-collapsed .recent-entry p,
+.sidebar-collapsed .bottom-item p,
+.sidebar-collapsed .recent-title {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Optional: Restore text when expanded */
+.sidebar-extended .new-chat p,
+.sidebar-extended .recent-entry p,
+.sidebar-extended .bottom-item p,
+.sidebar-extended .recent-title {
+    opacity: 1;
+    width: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.prompt-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  
+.delete-cross {
+    display: none;
+    color: #555555;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+}
+  
+.recent-entry:hover .delete-cross {
+    display: inline;
+}
+
+.settings-dropdown {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 999;
+    width: 220px;
+    padding: 4px 0;
+    font-family: sans-serif;
+}
+  
+.dropdown-item {
+    padding: 12px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+  
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+  
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+  
+body.dark-mode .sidebar {
+    background-color: #2c2c2c;
+}
+  
+body.dark-mode .settings-dropdown {
+    background-color: #333;
+    color: white;
+}
+  
+body.dark-mode .dropdown-item:hover {
+    background-color: #444;
+}
+  
+body.dark-mode .sidebar .new-chat {
+    background-color: #444;
+    color: #ddd;
+}
+
+body.dark-mode .react-icon {
+    color: #ccc; /* light color for dark background */
+  }
+
+
+body.dark-mode .sidebar .recent-title{
+    color:#ddd
+}
